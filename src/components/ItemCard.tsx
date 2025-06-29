@@ -1,19 +1,22 @@
-import type {Item} from "../common/types/Item";
-import {Link} from "react-router-dom";
+import type { Item } from "../common/types/Item.ts";
+
 
 interface Props {
     item: Item;
+    containerColor: string;
 }
 
-export default function ItemCard({item}: Props) {
+const ItemsCard = ({ item, containerColor  }: Props) => {
     return (
-        <li key={item.id} className="bg-amber-200 rounded-2xl p-2 m-2">
-            Name: {item.name} Container Id: {item.containerId}
+        <li
+            className="p-2 rounded text-black text-center mb-2"
+            style = {{backgroundColor: containerColor}}
 
-            <Link to={`/items/${item.id}`}
-                  className="text-blue-600 hover:underline"
-            >To item page
-            </Link>
+        >
+            <p className="text-black">Item name : {item.name}</p>
+            <p className="text-black">Container ID: {item.containerId}</p>
         </li>
     );
-}
+};
+
+export default ItemsCard;

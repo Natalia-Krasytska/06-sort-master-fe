@@ -1,22 +1,21 @@
 import type Container from "../common/types/Container.ts";
-import type {ReactNode} from "react";
+import CreateItemForm from "./CreateItemForm";
+
 
 interface Props {
     container: Container;
-    children: ReactNode;
 }
-export default function ContainerCard({container, children}: Props){
+export default function ContainerCard({ container }: Props) {
     return (
-        <div
-            className="relative p-4 rounded-lg shadow-md text-white"
-            style={{backgroundColor: container.color}}
+        <li
+            key={container.id}
+            className="p-4 rounded-lg shadow-md text-white"
+            style={{ backgroundColor: container.color }}
         >
             <h3 className="text-xl font-semibold">{container.name}</h3>
             <p>{container.description}</p>
 
-            {children && <div className="mt-4">{children}</div>}
-        </div>
+            <CreateItemForm containerId={container.id}/>
+        </li>
     );
 }
-
-
