@@ -42,6 +42,12 @@ export default function Header() {
             >
               Items
             </Link>
+            <Link
+                to="/advert"
+                className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+            >
+              Adverts
+            </Link>
           </nav>
         </div>
       </header>
