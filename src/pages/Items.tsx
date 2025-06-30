@@ -1,4 +1,4 @@
-import ItemsList from "../components/ItemList.tsx";
+import ItemsList from "../components/ItemList";
 
 
 export default function Items() {

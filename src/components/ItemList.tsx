@@ -28,7 +28,7 @@ export default function ItemsList() {
                 {message ? <p className="text-red-400">{message}</p> : null}
                 {items.map((item) => (
                     <ItemCard item={item} />
-                ))}Add commentMore actions
+                ))}
             </ul>
         </div>
     );

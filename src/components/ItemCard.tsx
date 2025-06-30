@@ -12,5 +12,5 @@ export default function ItemCard({ item }: Props) {
 
             <Link to={`/items/${item.id}`}>To item page</Link>
         </li>
-    );
+);
 }
